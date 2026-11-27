@@ -1,79 +1,50 @@
-# FixIt-Repairs
-Appliance Repair Management System using HTML, CSS and JavaScript.
+# FixIt Repairs – Appliance Repair Management Portal
 
-#Project Overview
+A CSE 326 front-end project made with HTML, CSS and JavaScript. It demonstrates a repair workflow with separate customer, technician and administrator dashboards.
 
-FixIt Repairs is a frontend web project created for CSE 326. It is
-designed to make appliance repair booking and repair-request management
-easier for customers.
+## Features
 
-Customers can explore available repair-service categories, submit their
-repair details through a booking form, and view repair requests in the
-management section.
+### Customer
+- Sign in and submit a repair request.
+- Enter appliance, preferred date, address and problem.
+- View submitted requests, assigned technician and current status.
 
-#Main Sections
+### Administrator
+- View all customer requests.
+- Assign each request to a technician.
+- Change status: Pending, Assigned, In Progress, Completed or Cancelled.
 
- 1. Home
+### Technician
+- View jobs assigned to their account.
+- Update a job to Assigned, In Progress or Completed.
 
-Introduces the FixIt Repairs website and provides navigation to the main
-sections.
- 2. Services
+## Demo accounts
 
-Displays four appliance repair categories: - Air Conditioner - Washing
-Machine - Refrigerator - Television
+| Role | Email | Password |
+|---|---|---|
+| Administrator | admin@fixit.com | admin123 |
+| Technician 1 | tech@fixit.com | tech123 |
+| Technician 2 | meera@fixit.com | tech123 |
+| Customer | user@fixit.com | user123 |
 
- 3. Book a Repair
+## Project files
+- `index.html` – structure and login screen
+- `style.css` – layout, colours and responsive styling
+- `script.js` – demo login, request booking, assignment and status updates
+- `README.md` – project details
 
-Provides a form for customers to enter: - Full name - Phone number -
-Appliance - Preferred date - Service address - Problem description
+## Run the project
+1. Keep all four files in the same folder.
+2. Open `index.html` in a browser.
+3. Sign in as a customer and submit a test repair request.
+4. Log in as admin in the same browser and assign a technician.
+5. Log in as that technician and update the job status.
+6. Return to the customer account to view the updated status.
 
- 4. Manage Repair Requests
+## Data storage and project limitation
+This version saves requests in the browser's `localStorage`. The data remains after a refresh and can be viewed by the different demo roles **in the same browser on the same device**.
 
-Provides a management view for repair requests, including these status
-categories: - Pending - In Progress - Completed
+This is a front-end demonstration, not a production multi-user service. A customer using a phone will not automatically share data with an admin using a different laptop. Real shared accounts and cross-device updates need a backend server and database. The demo passwords are visible in the JavaScript file and are not secure.
 
-The dashboard is intended to help organize and monitor repair requests.
-Actual saving and status-updating behaviour depends on the JavaScript
-implementation.
-
-#Technologies Used
-
--   HTML-- structures the web pages and content.
--   CSS -- styles the website, including layout, colours, spacing,
-    and typography.
--   JavaScript -- adds client-side functionality and interactivity.
-
-#Project Structure
-
-*Appliance-Repair-Management
- -index.html
- -style.css
-  -script.js
-
-
-*Update the file names above if your project uses a different
-structure.*
-
-#How to Run
-
-1.  Download or clone the project.
-2.  Open the project folder.
-3.  Open index.html in a web browser.
-
-For development, you can open the folder in Visual Studio Code and use
-the Live Server extension if installed.
-
-#Project Scope
-
-This project demonstrates the frontend of an appliance repair management
-website using HTML, CSS, and JavaScript. It does not claim to provide
-live repair services, technician dispatch, online payments, or
-backend/database functionality unless those features are separately
-implemented.
-
-#Academic Project
-
--   Project: Appliance Repair Management System
--   Website Name: FixIt Repairs
--   Course: CSE 326
--   Project Type: Frontend Web Development
+## Technologies
+HTML5 · CSS3 · JavaScript · Browser localStorage
